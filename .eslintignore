@@ -1,0 +1,7 @@
+*.css
+*.svg
+*.scss
+node_modules/*
+src/assets*
+src/service-worker.ts*
+src/serviceWorkerRegistration.ts

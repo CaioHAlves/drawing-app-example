@@ -1,0 +1,50 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #F7F7F7;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input[type='radio'] {
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -o-appearance:none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.Index-Suspense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Progresso-Circular.MuiCircularProgress-root {
+  color: #95C6F4;
+}
+
+.btn-snackbar-att.MuiButton-root {
+  color: #FFFFFF;
+}
