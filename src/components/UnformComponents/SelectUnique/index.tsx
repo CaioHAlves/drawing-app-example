@@ -40,7 +40,7 @@ export function Select({ name, options, hasIcon, icon, width, margin, onChange, 
     registerField({
       name: fieldName,
       ref: selectRef.current,
-      getValue: (ref: any) => {
+      getValue: (ref) => {
         if (rest.isMulti) {
           if (!ref.state.value) {
             return []
@@ -60,7 +60,7 @@ export function Select({ name, options, hasIcon, icon, width, margin, onChange, 
   }, [fieldName, registerField, rest.isMulti])
 
   return (
-    <Container width={width} margin={margin}>
+    <Container width={width} margin={margin} border={error ? "#BB0A30" : undefined} color={error ? "#BB0A30" : undefined}>
       <ReactSelect
         ref={selectRef}
         defaultValue={

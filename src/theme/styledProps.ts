@@ -22,4 +22,5 @@ export interface StyledProps {
   borderRadius?: string
   fontWeight?: number | string
   margincomponent?: string
+  heighttextarea?: string
 }

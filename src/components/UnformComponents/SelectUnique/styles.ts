@@ -18,6 +18,20 @@ export const Container = styled.div<StyledProps>`
     color: ${theme.palette.primary.main};
   }
 
+  .react-select__single-value {
+    color:  #043D94;
+    font-size: 14px;
+  }
+
+  .react-select__control {
+    border-color: ${props => props.border};
+  }
+
+  .react-select__placeholder {
+    color: ${props => props.color};
+    letter-spacing: 0.4px;
+  }
+
   .react-select__control {
     min-height: 50px;
     background-color: transparent;
