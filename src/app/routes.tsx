@@ -4,29 +4,12 @@ import { Container } from '../components/globalComponents';
 import { useHooks } from '../hooks/useHooks';
 import { useRedux } from '../hooks/useRedux';
 import { useValidations } from '../hooks/useValidations';
-import { PaginaInicial } from '../pages';
+import { InitialPage } from '../pages';
 
 interface PrivateRouteProps {
   component: any
   path?: string
   exact?: boolean
-}
-
-const PrivateRouteForAdmins = (props: PrivateRouteProps) => {
-  const { component: Component, ...rest } = props
-  const { isAdmin } = useValidations()
-  const { useAppSelect } = useRedux()
-
-  const { token, type } = useAppSelect.user
-
-  return (
-    <Route
-      {...rest}
-      render={(routerProps) => (isAdmin(token, type) ?
-        <Component {...routerProps} />
-        : <Redirect to='/home' />)}
-    />
-  )
 }
 
 const PrivateRoute = (props: PrivateRouteProps) => {
@@ -68,7 +51,7 @@ const Rotas = () => {
   return (
     <Container>
       <Switch>
-        <Route exact path="/" component={PaginaInicial} />
+        <Route exact path="/" component={InitialPage} />
       </Switch>
     </Container>
   )

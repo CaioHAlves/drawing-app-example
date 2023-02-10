@@ -1,1 +1,1 @@
-export * from './PaginaInicial'
+export * from './IntialPage'

@@ -1,17 +1,16 @@
 import React, { useEffect, useRef } from 'react'
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox, { CheckboxProps } from '@material-ui/core/Checkbox';
 import { useField } from '@unform/core'
 
-interface Props {
+interface Props extends CheckboxProps {
   name: string
   label?: string
   value?: string
   style?: object
   className?: string
-  size?: "medium" | "small"
 }
 
-export function CheckBox({ name, value, label, style, className, size, }: Props) {
+export function CheckBox({ name, value, label, style, className, ...rest }: Props) {
   const inputRef = useRef<HTMLInputElement>(null)
   const { fieldName, defaultValue, registerField } = useField(name)
 
@@ -40,7 +39,7 @@ export function CheckBox({ name, value, label, style, className, size, }: Props)
         value={value}
         id={fieldName}
         style={style}
-        size={size}
+        {...rest}
       />
 
       <label htmlFor={fieldName} key={fieldName}>
