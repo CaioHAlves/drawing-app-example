@@ -1,33 +1,10 @@
 import React, { useEffect } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Container } from '../components/globalComponents';
 import { useHooks } from '../hooks/useHooks';
 import { useRedux } from '../hooks/useRedux';
 import { useValidations } from '../hooks/useValidations';
 import { InitialPage } from '../pages';
-
-interface PrivateRouteProps {
-  component: any
-  path?: string
-  exact?: boolean
-}
-
-const PrivateRoute = (props: PrivateRouteProps) => {
-  const { component: Component, ...rest } = props
-  const { isLoggedIn } = useValidations()
-  const { useAppSelect } = useRedux()
-
-  const { token, name } = useAppSelect.user
-
-  return (
-    <Route
-      {...rest}
-      render={(routerProps) => (isLoggedIn(token, name) ?
-        <Component {...routerProps} />
-        : <Redirect to='/' />)}
-    />
-  )
-}
 
 const Rotas = () => {
 

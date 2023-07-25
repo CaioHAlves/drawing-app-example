@@ -14,22 +14,26 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      light: "#08944D",
-      main: "#044725",
-      dark: "#011d0F",
+      main: '#F2CE1B',
+      light: '#F2DBAE',
+      dark: '#F2CE1B'
     },
     secondary: {
-      light: "#ebb377",
-      main: "#9e6e35",
-      dark: "#683f0d",
-    },
-    error: {
-      light: "#EA6568",
-      dark: "#860539",
-      main: "#BB0A30"
-    },
-    action: {
-      hover: "#08944e6e"
+      main: '#47419c',
+      light: '#47419c',
+      dark: '#18153b'
+    }
+  },
+  overrides: {
+    MuiLink: {
+      root: {
+        color: '#F2DBAE',
+        margin: '0rem 0rem 0rem 0.9375rem',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        textDecoration: 'none',
+        fontSize: '1.25rem'
+      }
     }
   }
 });
