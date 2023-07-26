@@ -1,6 +1,6 @@
 {
-  "short_name": "<nome_resumido_projeto>",
-  "name": "<nome_projeto>",
+  "short_name": "Drawing App",
+  "name": "Drawing App - Caio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,7 +20,7 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#0D47A1",
-  "background_color": "#0D47A1",
+  "theme_color": "#18153b",
+  "background_color": "#18153b",
   "prefer_related_applications": true
 }
