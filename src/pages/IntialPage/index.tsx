@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery, useTheme } from '@material-ui/core'
 import { Delete, GetApp } from '@material-ui/icons'
-import { Drawing, clearDrawing, getImage } from 'drawing-react'
+import { Signature, useActions } from 'signature-component'
 import { Header } from '../../components/Header';
 import { FooterComponent } from '../../components/Footer';
 import * as S from './styles.module'
@@ -11,11 +11,12 @@ export function InitialPage() {
 
   const theme = useTheme()
   const display = useMediaQuery(theme.breakpoints.up('lg'))
+  const { clearSignature, getImageSignature } = useActions()
 
   const getImageDrawing = () => {
     const ancor = document.createElement('a')
     ancor.setAttribute("download", "img.png")
-    ancor.href = getImage()
+    ancor.href = getImageSignature()
     ancor.download = "image_drawing"
     ancor.click()
     ancor.remove()
@@ -25,14 +26,13 @@ export function InitialPage() {
     <S.Content>
       <Header />
       <S.Content>
-        <Drawing
+        <Signature
           penColor={theme.palette.primary.main}
-          drawingHeight="100%"
-          drawingWidth="100%"
-          backgroundColor='transparent'
+          height="100%"
+          width="100%"
         />
         <S.AreaButtons>
-          <IconButton onClick={clearDrawing} color="primary">
+          <IconButton color="primary" onClick={clearSignature}>
             <Delete fontSize='large' />
           </IconButton>
           <IconButton onClick={getImageDrawing} color="primary">
