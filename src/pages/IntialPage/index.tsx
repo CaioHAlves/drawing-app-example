@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import { useMediaQuery, useTheme } from '@material-ui/core'
 import { Delete, GetApp } from '@material-ui/icons'
 import { Signature, useActions } from 'signature-component'
@@ -11,7 +11,7 @@ export function InitialPage() {
 
   const theme = useTheme()
   const display = useMediaQuery(theme.breakpoints.up('lg'))
-  const { clearSignature, getImageSignature } = useActions()
+  const { clearSignature, getImageSignature, changeBackgroundColor } = useActions()
 
   const getImageDrawing = () => {
     const ancor = document.createElement('a')
@@ -20,6 +20,10 @@ export function InitialPage() {
     ancor.download = "image_drawing"
     ancor.click()
     ancor.remove()
+  }
+
+  const getColor = (event: ChangeEvent<HTMLInputElement>) => {
+    changeBackgroundColor(event.target.value)
   }
 
   return (
@@ -40,6 +44,7 @@ export function InitialPage() {
           <IconButton onClick={getImageDrawing} color="primary">
             <GetApp fontSize='large' />
           </IconButton>
+          <input type="color" onBlur={getColor} defaultValue={theme.palette.secondary.main} />
         </S.AreaButtons>
       </S.Content>
       <FooterComponent

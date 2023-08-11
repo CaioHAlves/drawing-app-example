@@ -8718,10 +8718,10 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-signature-component@^0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/signature-component/-/signature-component-0.1.8.tgz#20140e8ae1274a55b61c00bb9094e57dfe2ceafc"
-  integrity sha512-gucUGR/Ck8UFN+k5iupRlRZmg2fpoS0pihC1bP1z5XsEAjBtRJU9ol3rfoYogMIYoctNu5Y+bZtEltZ/e+4/Qw==
+signature-component@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/signature-component/-/signature-component-0.1.9.tgz#ee805854b82e07efe5c4b88b8ef8198d82627623"
+  integrity sha512-XvOlhO9NLPtH+e2Zk6LKkn+wR5k0XzcziwmFQdCZsfGGL2EhVdBnkzX9KvciwPQk/aeX2oPxvaIp+UPeGBsMGA==
 
 sisteransi@^1.0.5:
   version "1.0.5"

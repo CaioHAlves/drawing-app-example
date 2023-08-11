@@ -10,9 +10,18 @@ export const Content = styled.div`
   background: ${theme.palette.secondary.main};
   overflow: auto;
   position: relative;
+
+  input[type="color"] {
+    height: 35px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
 `
 export const AreaButtons = styled.div`
   display: flex;
+  align-items: center;
   position: absolute;
   gap: 8px;
   bottom: 5%;
