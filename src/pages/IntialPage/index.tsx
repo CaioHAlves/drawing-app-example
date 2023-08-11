@@ -28,8 +28,10 @@ export function InitialPage() {
       <S.Content>
         <Signature
           penColor={theme.palette.primary.main}
-          height="100%"
-          width="100%"
+          styles={{
+            width: '100%',
+            height: '100%'
+          }}
         />
         <S.AreaButtons>
           <IconButton color="primary" onClick={clearSignature}>
@@ -41,7 +43,7 @@ export function InitialPage() {
         </S.AreaButtons>
       </S.Content>
       <FooterComponent
-        height={display ? '150px' : '100'}
+        height={display ? '150px' : '100px'}
         iconSize={display ? 'large' : 'medium'}
         padding={display ? '' : '16px 0px'}
       />
