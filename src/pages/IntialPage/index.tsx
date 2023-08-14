@@ -44,7 +44,7 @@ export function InitialPage() {
           <IconButton onClick={getImageDrawing} color="primary">
             <GetApp fontSize='large' />
           </IconButton>
-          <input type="color" onBlur={getColor} defaultValue={theme.palette.secondary.main} />
+          <input type="color" onBlur={getColor} defaultValue={theme.palette.secondary.main} id="color1" />
         </S.AreaButtons>
       </S.Content>
       <FooterComponent

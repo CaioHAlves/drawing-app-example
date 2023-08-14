@@ -12,11 +12,23 @@ export const Content = styled.div`
   position: relative;
 
   input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     height: 35px;
     border: none;
+    background: transparent;
     padding: 0;
-    background-color: transparent;
     cursor: pointer;
+  }
+
+  input[type="color"]::-webkit-color-swatch {
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+  }
+  input[type="color"]::-moz-color-swatch {
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
   }
 `
 export const AreaButtons = styled.div`
