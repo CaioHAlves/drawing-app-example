@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom'
 import { MuiThemeProvider } from '@material-ui/core';
 import { MuiPickersUtilsProvider } from "@material-ui/pickers"
@@ -7,8 +7,13 @@ import pt from 'date-fns/locale/pt-BR'
 import Rotas from './routes';
 import { theme } from '../theme';
 import 'react-toastify/dist/ReactToastify.css'
+import { notificaAirbrake } from '../Airbrake'
 
 const App = () => {
+
+  useEffect(() => {
+    notificaAirbrake()
+  }, [])
 
   return (
     <MuiThemeProvider theme={theme}>
